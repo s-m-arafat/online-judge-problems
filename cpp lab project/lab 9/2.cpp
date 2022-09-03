@@ -12,8 +12,8 @@ class day_type
        string AddDays;
 public:
        day_type(int);
-       string setday();
-       string preday();
+       void setday();
+       void preday();
        void Nextday();
        string add(int n);
        void print();
@@ -22,6 +22,7 @@ public:
 int main()
 {
        day_type Da(0);
+       Da.print();
        Da.setday();
        Da.preday();
        Da.Nextday();
@@ -43,16 +44,16 @@ day_type::day_type(int i)
        Wdays[5] = "Sat";
        Wdays[6] = "Sun";
        day = Wdays[i];
+       dayNum = i;
 }
 
-string day_type::setday()
+void day_type::setday()
 {
     cout<<"Enter day number starting 0 for monday ";
     cin>>dayNum;
     day = Wdays[dayNum];
-    cout
 }
-string day_type::preday()
+void day_type::preday()
 {
        cout<<Wdays[dayNum-1];
        prDay = Wdays[dayNum-1];
