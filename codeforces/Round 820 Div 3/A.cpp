@@ -1,13 +1,16 @@
 //Auth:Shakil Mahmud Arafat AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
-#include<algorithm>
 
 using namespace std;
 
 void soln()
 {
-    int n;
+    int a,b,c;
+    cin>>a>>b>>c;
+    if((a-1) == (abs(b-c)+(c-1))) cout<<3<<endl;
+    else if ((a-1) < (abs(b-c)+(c-1))) cout<<1<<endl;
+    else cout<<2<<endl;
 }
 int main()
 {
@@ -19,3 +22,4 @@ int main()
         soln();
     return 0;
 }
+
