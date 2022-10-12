@@ -12,7 +12,12 @@ using namespace std;
 
 void soln()
 {
-    ll n;
+    ll x,y;
+
+    cin>>x>>y;
+
+    if(100*(float(y)/float(x))>=50) print("YES");
+    else print("NO");
 }
 int main()
 {

@@ -13,6 +13,14 @@ using namespace std;
 void soln()
 {
     ll n;
+    cin>>n;
+    int a[n], count[101]={0}, max=1;
+    loop(i,n){
+        cin>>a[i];
+        count[a[i]-1]++;
+        if(count[a[i]-1]>max) max = count[a[i]-1];
+    }
+    print(n-max);
 }
 int main()
 {
@@ -24,3 +32,4 @@ int main()
         soln();
     return 0;
 }
+

@@ -2,17 +2,16 @@
 
 #include<bits/stdc++.h>
 #define ll long long
-#define nl '\n'
-#define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
-#define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
-#define loop(x,n) for(int x = 0; x < n; x++)
-#define print(x) cout<<x<<endl
+#define n '\n'
+
 
 using namespace std;
 
 void soln()
 {
-    ll n;
+    ll a,b;
+    cin>>a>>b;
+    cout<<ceil(float((a*b)/4.0))<<n;
 }
 int main()
 {
@@ -24,3 +23,4 @@ int main()
         soln();
     return 0;
 }
+

@@ -1,18 +1,25 @@
+
 //Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
 #define ll long long
-#define nl '\n'
-#define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
-#define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
-#define loop(x,n) for(int x = 0; x < n; x++)
-#define print(x) cout<<x<<endl
+
+
 
 using namespace std;
 
 void soln()
 {
     ll n;
+    ll ans=0;
+    cin>>n;
+    vector <char> s(n);
+    for (ll i=0; i<n; i++) cin>>s[i];
+    for (ll i=0; i<n; i++){
+        if(s[i] == '1') ans++;
+        else break;
+    }
+    cout<<ans<<endl;
 }
 int main()
 {
@@ -24,3 +31,4 @@ int main()
         soln();
     return 0;
 }
+

@@ -1,3 +1,4 @@
+
 //Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
@@ -12,7 +13,9 @@ using namespace std;
 
 void soln()
 {
-    ll n;
+    ll n, k;
+    cin>>n>>k;
+    cout<<pow(n/k,2)<<nl;
 }
 int main()
 {

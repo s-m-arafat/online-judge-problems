@@ -2,17 +2,20 @@
 
 #include<bits/stdc++.h>
 #define ll long long
-#define nl '\n'
-#define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
-#define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
-#define loop(x,n) for(int x = 0; x < n; x++)
-#define print(x) cout<<x<<endl
+
+
 
 using namespace std;
 
 void soln()
 {
-    ll n;
+    float a,b,x,y;
+    cin>>a>>b>>x>>y;
+    float chef = (a/x);
+    float chefina = (b/y);
+    if(chef>chefina) cout<<"Chefina"<<endl;
+    else if (chef<chefina) cout<<"Chef"<<endl;
+    else cout<<"Both"<<endl;
 }
 int main()
 {
@@ -24,3 +27,4 @@ int main()
         soln();
     return 0;
 }
+

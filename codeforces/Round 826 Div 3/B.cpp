@@ -13,6 +13,16 @@ using namespace std;
 void soln()
 {
     ll n;
+    cin>>n;
+    if(n==1) print(1);
+    else if(n==2) print("2 1");
+    else if(n==3) print(-1);
+    else if(n==4) print("4 3 1 2");
+    else{
+        for(ll i=n; i>n/2 +1; i--) cout<<i<<" ";
+        for(ll i=1; i<=n/2 +1; i++) cout<<i<<" ";
+    cout<<nl;
+    }
 }
 int main()
 {
@@ -24,3 +34,4 @@ int main()
         soln();
     return 0;
 }
+

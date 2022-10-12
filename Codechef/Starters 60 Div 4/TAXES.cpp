@@ -13,6 +13,10 @@ using namespace std;
 void soln()
 {
     ll n;
+    cin>>n;
+    ll ans=n;
+    if(n>100) ans=n-10;
+    print(ans);
 }
 int main()
 {
@@ -24,3 +28,4 @@ int main()
         soln();
     return 0;
 }
+

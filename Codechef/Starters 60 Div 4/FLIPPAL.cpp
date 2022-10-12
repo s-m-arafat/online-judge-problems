@@ -13,6 +13,18 @@ using namespace std;
 void soln()
 {
     ll n;
+    cin>>n;
+    string s, ans="YES";
+    cin>>s;
+    ll ones=0, zeros=0;
+    for(int i=0; i<n; i++)
+        if(s[i]=='1') ones++;
+    zeros  = s.size() - ones;
+    if(!(n%2)){
+        if(ones%2==0 && zeros%2==0)ans = "YES";
+        else ans="NO";
+    }
+    print(ans);
 }
 int main()
 {
