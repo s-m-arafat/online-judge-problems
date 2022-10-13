@@ -12,7 +12,25 @@ using namespace std;
 
 void soln()
 {
+    string s[8], ans="B";
+    int r=0, b=0;
+    bool f=false;
+    loop(i,8) cin>>s[i];
+    loop(rw,8)
+    {
+        r=0;
+        loop(cl,8){
+            if(s[rw][cl]=='R')r++;
+            else r=0;
+            if(r==8){
+                f=true;
+                ans="R";
+                break;
+            }
+        }
+    }
 
+    print(ans);
 }
 int main()
 {

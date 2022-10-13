@@ -10,14 +10,27 @@
 
 using namespace std;
 
+auto has_duplicates(const vector<ll>& v) -> bool
+{
+    unordered_set<ll> s;
+    copy(v.begin(), v.end(), inserter(s, s.begin()));
+
+    return v.size() != s.size();
+}
 void soln()
 {
-
+    ll n;
+    cin>>n;
+    string ans;
+    vector<ll> a(n);
+    for(int i = 0; i < n; i++) cin>>a[i];
+    if(has_duplicates(a)) ans ="NO";
+    else ans = "YES";
+    print(ans);
 }
 int main()
 {
     ios::sync_with_stdio(false);
-    cin.tie(0);
 
     int tests;
     cin>>tests;

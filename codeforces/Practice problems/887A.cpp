@@ -12,16 +12,27 @@ using namespace std;
 
 void soln()
 {
-
+    string s;
+    cin>>s;
+    bool one=false;
+    int zero=0;
+    loop(i,s.size()){
+        if(s[i] == '1') one=true;
+        if(one && s[i] == '0') zero++;
+        if(zero==6){
+            print("yes");
+            break;
+        }
+    }
+    if(zero<6) print("no");
 }
 int main()
 {
     ios::sync_with_stdio(false);
-    cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    //int tests;
+    //cin>>tests;
+    //while(tests--)
         soln();
     return 0;
 }
