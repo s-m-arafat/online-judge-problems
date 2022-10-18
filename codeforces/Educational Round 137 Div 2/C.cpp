@@ -12,25 +12,25 @@ using namespace std;
 
 void soln()
 {
-    ll n;
+    ll n, lid=0, ans=0;
     cin>>n;
-    vector<int> b(1003);
-    int ans = -1,x;
+    string s;
+    vector<ll> a(n);
+    cin>>s;
     loop(i,n){
-        cin>>x;
-        b[x] = i+1;
+        cin>>a[i];
+        if(s[i] == '1') ans+= max(a[i], lid);
+        if(s[i] == '0' || a[i]<lid) lid = a[i];
     }
-    for(int i=1; i<=1000; i++){
-        for(int j=1; j<=1000; j++){
-            if(b[i] && b[j]) if(__gcd(i,j) == 1)ans = max(ans, b[i]+b[j]);
-        }
-    }
-    if(ans == -1)print(ans);
-    else print(ans);
+//    sort(a.begin(), a.end(), greater<int>());
+//
+//    ll ans = accumulate(a.begin(), a.begin()+lid, 0);
+    print(ans);
 }
 int main()
 {
     ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int tests;
     cin>>tests;

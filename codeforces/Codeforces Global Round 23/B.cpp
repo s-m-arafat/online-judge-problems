@@ -1,3 +1,4 @@
+
 //Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
@@ -6,31 +7,28 @@
 #define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
 #define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
 #define loop(x,n) for(int x = 0; x < n; x++)
-#define print(x) cout<<x<<endl
+#define print(x) cout<<x<<endl;
 
 using namespace std;
 
 void soln()
 {
-    ll n;
+    ll n,ans=0;
     cin>>n;
-    vector<int> b(1003);
-    int ans = -1,x;
-    loop(i,n){
-        cin>>x;
-        b[x] = i+1;
+    vector<ll>a(n);
+    arrIn(a,n);
+    for(ll i=0, j=n-1; i<j; i++, j--){
+        if(a[j]) i--;
+        else if(a[i] && !a[j]) ans++;
+        else if(!a[i] && a[j]) j++;
+        else j++;
     }
-    for(int i=1; i<=1000; i++){
-        for(int j=1; j<=1000; j++){
-            if(b[i] && b[j]) if(__gcd(i,j) == 1)ans = max(ans, b[i]+b[j]);
-        }
-    }
-    if(ans == -1)print(ans);
-    else print(ans);
+    print(ans)
 }
 int main()
 {
     ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int tests;
     cin>>tests;

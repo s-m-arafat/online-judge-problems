@@ -10,27 +10,32 @@
 
 using namespace std;
 
+
 void soln()
 {
-    ll n;
+    int n;
+    string s;
     cin>>n;
-    vector<int> b(1003);
-    int ans = -1,x;
+    int a[n];
+    arrIn(a,n);
+    cin>>s;
+    map<int, char>m;
     loop(i,n){
-        cin>>x;
-        b[x] = i+1;
-    }
-    for(int i=1; i<=1000; i++){
-        for(int j=1; j<=1000; j++){
-            if(b[i] && b[j]) if(__gcd(i,j) == 1)ans = max(ans, b[i]+b[j]);
+        if(m.find(a[i])!=m.end()){
+            if(m[a[i]] != s[i]){
+                print("NO");
+                return;
+            }
         }
+        m.insert({a[i],s[i]});
     }
-    if(ans == -1)print(ans);
-    else print(ans);
+    print("YES");
 }
+
 int main()
 {
     ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int tests;
     cin>>tests;
@@ -38,3 +43,8 @@ int main()
         soln();
     return 0;
 }
+
+
+
+
+

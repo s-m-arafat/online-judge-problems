@@ -1,5 +1,5 @@
 //Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
-
+//A. Modular Exponentiation
 #include<bits/stdc++.h>
 #define ll long long
 #define nl '\n'
@@ -12,29 +12,21 @@ using namespace std;
 
 void soln()
 {
-    ll n;
-    cin>>n;
-    vector<int> b(1003);
-    int ans = -1,x;
-    loop(i,n){
-        cin>>x;
-        b[x] = i+1;
-    }
-    for(int i=1; i<=1000; i++){
-        for(int j=1; j<=1000; j++){
-            if(b[i] && b[j]) if(__gcd(i,j) == 1)ans = max(ans, b[i]+b[j]);
-        }
-    }
-    if(ans == -1)print(ans);
-    else print(ans);
+    unsigned ll n,m;
+    cin>>n>>m;
+    if(n>m || n>27)print(m);
+    else cout<<m%(1<<n)<<nl;
+
 }
 int main()
 {
     ios::sync_with_stdio(false);
+    cin.tie(0);
 
-    int tests;
+    /*int tests;
     cin>>tests;
-    while(tests--)
+    while(tests--)*/
         soln();
     return 0;
 }
+

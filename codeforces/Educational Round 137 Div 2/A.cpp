@@ -14,23 +14,14 @@ void soln()
 {
     ll n;
     cin>>n;
-    vector<int> b(1003);
-    int ans = -1,x;
-    loop(i,n){
-        cin>>x;
-        b[x] = i+1;
-    }
-    for(int i=1; i<=1000; i++){
-        for(int j=1; j<=1000; j++){
-            if(b[i] && b[j]) if(__gcd(i,j) == 1)ans = max(ans, b[i]+b[j]);
-        }
-    }
-    if(ans == -1)print(ans);
-    else print(ans);
+    vector <ll> a(n);
+    arrIn(a,n);
+    print(3*(10-n)*(9-n));
 }
 int main()
 {
     ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int tests;
     cin>>tests;
