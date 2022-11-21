@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -28,11 +26,25 @@ typedef vector<vi>vvi;
 #define prnt(x) cout<<x
 
 
-
 void soln()
 {
     ll n;
-    get n;
+    cin>>n;
+    ll a = sqrt(n);
+    ll b = sqrt(n-(a*a));
+    ll ans = n;
+    while(a>b){ 
+        ll c = b;
+        while(a>=c){
+            if(sqrt(a)==sqrt(c)){
+                print(c<<" "<<a);
+                return;
+            }
+            else c++;
+        }
+        a--,b++;
+    }
+    print(-1);
 }
 int main()
 {

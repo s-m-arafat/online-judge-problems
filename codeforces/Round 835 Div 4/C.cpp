@@ -25,14 +25,26 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define prnt(x) cout<<x<<" "
 
 
 
 void soln()
 {
-    ll n;
+    ll n, mx=imn;
     get n;
+    vll a(n),b(n);
+    loop(i,n){
+        get a[i];
+        b[i]=a[i];
+        mx=max(mx,a[i]);
+    }
+    sort(allv(b));
+    loop(i,n){
+        if(a[i] != mx) prnt(a[i]-mx);
+        else prnt(mx-b[n-2]);
+    }
+    cout<<nl;
 }
 int main()
 {

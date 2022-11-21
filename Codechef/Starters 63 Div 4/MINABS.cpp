@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,24 @@ void soln()
 {
     ll n;
     get n;
+    string a,b;
+    ll am,bm,w1,w2;
+    ll ans=0;
+    get a>>b;
+    loop(i,n){
+        am = (a[i]-'a')+1;
+        bm = (b[i]-'a')+1;
+        
+        w1 = abs(am-bm);
+        w2 = (am+bm)%26;
+        
+        ans+=min(w1,w2);
+        
+        // print("ans "<<ans);
+    }
+    ans = ans+26;
+    print(min(ans, abs(26 - ans)));
+    
 }
 int main()
 {

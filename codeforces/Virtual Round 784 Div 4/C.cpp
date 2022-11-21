@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,18 @@ void soln()
 {
     ll n;
     get n;
+    vi a(n);
+    arrIn(a,n);
+    bool p[2];
+    p[0] = a[0] & 1;
+    p[1] = a[1] & 1;
+    loop(i,n){
+        if(p[i%2] != (a[i] & 1)){
+            print("NO");
+            return;
+        }
+    }
+    print("YES");
 }
 int main()
 {

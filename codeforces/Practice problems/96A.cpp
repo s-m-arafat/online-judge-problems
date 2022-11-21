@@ -32,16 +32,42 @@ typedef vector<vi>vvi;
 void soln()
 {
     ll n;
-    get n;
+    string s;
+    get s;
+    ll mx0=imn;
+    ll mx1=imn;
+    loop(i,s.size()){
+        ll zero = 0;
+        ll one = 0;
+        if(s[i]=='0'){
+            while(s[i]=='0'){
+                zero++;
+                i++;
+            }
+            mx0=max(mx0,zero);
+            i--;
+        }
+        else if(s[i]=='1'){
+            while(s[i]=='1'){
+                one++;
+                i++;
+            }
+            mx1=max(mx1,one);
+            i--;
+        }
+    }
+
+    if(max(mx0,mx1)>=7LL) print("YES");
+    else print("NO");
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

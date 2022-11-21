@@ -33,6 +33,14 @@ void soln()
 {
     ll n;
     get n;
+    ll x;
+    ll ai,aj,ak;
+    get ai>>aj>>ak;
+    loop(i,n-3){
+        get x;
+    }
+    if(ai==1) print("Yes");
+    else print("No");
 }
 int main()
 {

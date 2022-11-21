@@ -33,6 +33,25 @@ void soln()
 {
     ll n;
     get n;
+    ll x=1;
+    ll y=3*n;
+    if(n==1){
+        print(1);
+        print(1<<" "<<2);
+    }
+    // else if(n==2){
+    //     print(1);
+    //     print(2<<" "<<6);
+    // }
+    else{
+        ll stp = n&1?(n/2)+1:n/2;
+        print(stp);
+        while(stp--){
+            print(x<<" "<<y);
+            x+=3;
+            y-=3;
+        }
+    }
 }
 int main()
 {

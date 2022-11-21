@@ -1,0 +1,1 @@
+{"name":"Local: CHEFSCORE","url":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\CHEFSCORE.cpp","tests":[{"id":1666794987899,"input":"5\n1 8 4\n3 6 12\n4 5 0\n10 10 100\n8 5 36","output":"NO\nYES\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\CHEFSCORE.cpp","group":"local","local":true}

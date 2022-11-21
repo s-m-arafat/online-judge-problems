@@ -31,8 +31,16 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    int mx = imn;
+    int ans=0;
+    vi a(4);
+    loop(i,4){
+        get a[i];
+        if(a[i]>a[0]){
+            ans++;
+        }
+    }
+    print(ans);
 }
 int main()
 {

@@ -25,14 +25,23 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define prnt(x) cout<<x<<" "
 
 
 
 void soln()
 {
-    ll n;
+    int n,x;
     get n;
+    int ans;
+    set<int> a;
+    loop(i,n){
+        get x;
+        a.insert(x);
+    }
+    ans = a.size();
+    if((ans&1) != (n&1)) ans--;
+    print(ans);
 }
 int main()
 {

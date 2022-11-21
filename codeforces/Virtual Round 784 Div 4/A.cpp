@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,14 @@ void soln()
 {
     ll n;
     get n;
+//     For Division 1: 1900≤rating
+// For Division 2: 1600≤rating≤1899
+// For Division 3: 1400≤rating≤1599
+// For Division 4: rating≤1399
+    if(n<=1399) print("Division 4");
+    else if(n>=1400 and n<=1599) print("Division 3");
+    else if(n>=1600 and n<=1899) print ("Division 2");
+    else print("Division 1");
 }
 int main()
 {

@@ -31,17 +31,24 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
+    ll n,a,b,mx=imn;
+    ll p=0;
     get n;
+    while(n--){
+        get a>>b;
+        p = p-a+b;
+        mx=max(mx,p);
+    }
+    print(mx);
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

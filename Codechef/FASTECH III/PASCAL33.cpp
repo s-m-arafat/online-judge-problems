@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -27,21 +25,31 @@ typedef vector<vi>vvi;
 #define print(x) cout<<x<<endl
 #define prnt(x) cout<<x
 
+ll ncr(ll n, ll r){
+    if ((n == 0) || (r == 0) || (n == r)) return 1;
+    else return (ncr(n-1,r-1) + ncr(n-1,r));
+}
 
 
 void soln()
 {
     ll n;
     get n;
+    loop(i,n){
+        loop(j,i+1){
+            prnt(ncr(i,j)<<" ");
+        }
+        cout<<nl;
+    }
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

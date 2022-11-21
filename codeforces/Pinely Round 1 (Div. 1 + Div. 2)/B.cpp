@@ -33,6 +33,15 @@ void soln()
 {
     ll n;
     get n;
+    ll m;
+    set <ll> s;
+    loop(i,n){
+        get m;
+        s.insert(m);
+    }
+    if(s.size()>2)print(n);
+    else if(s.size()==1)print(1);
+    else print(2+((n-2)/2));
 }
 int main()
 {

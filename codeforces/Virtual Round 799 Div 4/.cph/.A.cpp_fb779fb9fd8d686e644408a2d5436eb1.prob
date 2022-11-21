@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\Works\\Contest\\codeforces\\Virtual Round 799 Div 4\\A.cpp","tests":[{"id":1667225506309,"input":"4\n2 3 4 1\n10000 0 1 2\n500 600 400 300\n0 9999 10000 9998","output":"2\n0\n1\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Works\\Contest\\codeforces\\Virtual Round 799 Div 4\\A.cpp","group":"local","local":true}

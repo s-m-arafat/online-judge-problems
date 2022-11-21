@@ -32,7 +32,15 @@ typedef vector<vi>vvi;
 void soln()
 {
     ll n;
+    string ans;
     get n;
+    ll a,b,c, sum=0;
+    while(n--){
+        // print(n);
+        get a>>b>>c;
+        sum+=(a*c);
+    }
+    print(sum);
 }
 int main()
 {

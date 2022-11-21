@@ -31,8 +31,19 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    string s; 
+    get s;
+    string ans,ss=" ";
+    loop(i,21) ss+="Yes";
+
+    size_t find = ss.find(s);
+    if(find != string::npos){
+        ans="YES";
+    }
+    else ans = "NO";
+    
+    print(ans);
+    
 }
 int main()
 {

@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,21 @@ void soln()
 {
     ll n;
     get n;
+    ll m = n;
+    ll count=0, mod=0;
+    ll ans=0;
+    while(m){
+        m /=10;
+        count++;
+    }
+    m=n;
+    while(n){
+        ll mod = n%10;
+        n /=10;
+        ans+=pow(mod,count);
+    }
+    if(ans==m) print("YES");
+    else print("NO");
 }
 int main()
 {

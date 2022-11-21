@@ -31,8 +31,11 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll a,b,c;
+    get a>>b>>c;
+    ll mx = max(a,max(b,c));
+    ll mn = min(a, min(b,c));
+    print((a+b+c)-mn-mx);
 }
 int main()
 {

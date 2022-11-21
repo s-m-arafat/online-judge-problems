@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,10 @@ void soln()
 {
     ll n;
     get n;
+    loop(i,n){
+        cout<<n-i<<" ";
+    }
+    cout<<nl;
 }
 int main()
 {

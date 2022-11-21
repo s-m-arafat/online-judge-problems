@@ -31,8 +31,27 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll m,s,n=0, tsum=0;
+    get m>>s;
+    ll sum = s;
+    string ans="NO";
+    vi a(m);
+    loop(i,m){
+        get a[i];
+        sum+=a[i];
+    }
+    for(ll i=1;tsum<sum;i++){
+        n++;
+        tsum = (i*(i+1))/2;
+        if(tsum==sum){
+            ans = "YES";
+            break;
+        }
+    }
+    sort(allv(a));
+    loop(i,m-1)if(a[i]==a[i+1]) ans="NO";
+    if(a[m-1]>n)ans="NO"; 
+    print(ans);
 }
 int main()
 {

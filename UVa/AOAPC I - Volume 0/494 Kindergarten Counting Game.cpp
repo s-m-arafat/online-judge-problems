@@ -31,17 +31,28 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll ans;
+    string s;
+    char c,prev;
+    while(getline(cin,s)){
+        ans=0;
+        loop(i,s.size()){
+            c=tolower(s[i]);
+            if(c>='a' and c<='z') prev = c;
+            if((c<'a' or c>'z') and (prev>='a' and prev<='z'))ans++,prev=' ';
+        }
+        print(ans);
+    }
+    
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

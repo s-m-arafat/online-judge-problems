@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -33,6 +31,15 @@ void soln()
 {
     ll n;
     get n;
+    string ans = "Yes";
+    vll a(2*n);
+    map<int,int>cnt;
+    loop(i,2*n){
+        get a[i];
+        cnt[a[i]]++;
+        if(cnt[a[i]]>2) ans="No";
+    }
+    print(ans);
 }
 int main()
 {

@@ -1,38 +1,38 @@
 //Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
-using namespace std;
-
-typedef long long ll;
-typedef vector<ll>vll;
-typedef vector<int>vi;
-typedef vector<vll>vvl;
-typedef vector<vi>vvi;
-
+#define ll long long
 #define nl '\n'
-#define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
-//vectors
-#define allv(a) a.begin(),a.end()
-#define pb push_back
-//
 #define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
 #define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
-//loops
 #define loop(x,n) for(int x = 0; x < n; x++)
-#define loopn(x,a,n) for(int x = a; x <= n; x++)
-#define loopr(x,n) for(int x = n; x >= 0; x--)
-//cout
+#define loopr(x,n) for(int x = n-1; x >= 0; x--)
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
 
-
+using namespace std;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll n, q=0,a=0;
+    cin>>n;
+    string s;
+    cin>>s;
+    if(s[n-1] == 'Q'){
+        print("NO");
+        return;
+    }
+    else{
+        loopr(i,n){
+            if(s[i] == 'Q') q++;
+            else a++;
+            if(q>a){
+               print("NO");
+                return;
+            }
+        }
+        print("YES");
+    }
+
 }
 int main()
 {
@@ -45,3 +45,4 @@ int main()
         soln();
     return 0;
 }
+

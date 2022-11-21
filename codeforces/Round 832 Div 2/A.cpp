@@ -33,6 +33,14 @@ void soln()
 {
     ll n;
     get n;
+    vll a(n);
+    ll mn = imx, sum=0;
+    loop(i,n){
+        get a[i];
+        // if(a[i]<0) mn = min(mn,abs(a[i]));
+        sum+=a[i];
+    }
+    print(abs(sum));
 }
 int main()
 {

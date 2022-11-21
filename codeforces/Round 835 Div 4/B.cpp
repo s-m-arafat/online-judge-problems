@@ -31,8 +31,13 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    int n,mx=imn;
+    string s;
+    get n>>s;
+    loop(i,n){
+        mx = max(mx,int(s[i]));
+    }
+    print((mx-int('a'))+1);
 }
 int main()
 {

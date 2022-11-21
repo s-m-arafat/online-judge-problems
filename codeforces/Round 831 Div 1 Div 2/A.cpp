@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -27,18 +25,34 @@ typedef vector<vi>vvi;
 #define print(x) cout<<x<<endl
 #define prnt(x) cout<<x
 
-
+// bool prime(int a) { 
+//     if (a < 2)
+//         return false;
+//     for (int i = 2; i * i <= a; i++) {
+//         if (a % i == 0)
+//             return false;
+//     }
+//     return true;
+// }
 
 void soln()
 {
     ll n;
     get n;
+    print(n);
+    // loopn(i,2,1e5){
+    //     if(prime(i)){
+    //         if(prime(i+n)==false){
+    //             print(i);
+    //             return;
+    //         }
+    //     }
+    // }
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
-
     int tests;
     cin>>tests;
     while(tests--)

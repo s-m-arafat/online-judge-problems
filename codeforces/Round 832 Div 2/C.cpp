@@ -33,6 +33,16 @@ void soln()
 {
     ll n;
     get n;
+    ll a,a0;
+    ll mn = imx;
+    loop(i,n){
+        get a;
+        if(!i) a0 = a;
+        else mn = min(mn,a);
+    }
+    // print(a);
+    if(mn>=a0) print("Bob");
+    else print("Alice"); 
 }
 int main()
 {

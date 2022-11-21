@@ -31,8 +31,26 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    int r,c=100;
+    char x;
+    int jj;
+    bool f=false;
+    int count[8]={0};
+    loop(i,8){
+        loop(j,8){
+            get x;
+            if(x=='#'){
+                count[i]++;
+                jj=j;
+            }  
+        }
+        if(count[i]==1 and count[i-1] == 2 and !f){
+                f=true;
+                r=i+1;
+                c=jj+1;
+        }
+    }
+    print(r<<" "<<c);
 }
 int main()
 {

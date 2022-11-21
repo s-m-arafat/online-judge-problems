@@ -33,15 +33,22 @@ void soln()
 {
     ll n;
     get n;
+    string s;
+    get s;
+    ll a = count(allv(s), 'A');
+    ll d  = count(allv(s), 'D');
+    if(a>d)print("Anton");
+    else if(a<d)print("Danik");
+    else if (a=d)print("Friendship");
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -31,8 +29,30 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll n; get n;
+    vi a(n);
+    unordered_map<int, int> m;  
+    loop(i,n){
+        get a[i];
+        m[a[i]]++;
+        
+        // auto it = m.find(a[i]);
+        // if(it != m.end()){
+        //     it->second++;
+        // }
+        // else{
+        //     m.insert({a[i], 0});
+        // }
+
+        // print(m[a[i]]);
+    }
+    loop(i,n){
+        if(m[a[i]]>=3){
+            print(a[i]);
+            return;
+        }
+    }
+    print(-1);
 }
 int main()
 {

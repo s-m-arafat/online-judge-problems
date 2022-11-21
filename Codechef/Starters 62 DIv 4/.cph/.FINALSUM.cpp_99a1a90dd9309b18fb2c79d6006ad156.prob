@@ -1,0 +1,1 @@
+{"name":"Local: FINALSUM","url":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\FINALSUM.cpp","tests":[{"id":1666796177523,"input":"2\n5 3\n1 3 4 4 2\n1 5\n3 4\n2 2\n1 2\n4\n1 1\n1 1","output":"16\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\FINALSUM.cpp","group":"local","local":true}

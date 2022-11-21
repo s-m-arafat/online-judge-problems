@@ -1,0 +1,1 @@
+{"name":"Local: MAKEMULTIPLE","url":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\MAKEMULTIPLE.cpp","tests":[{"id":1666796801642,"input":"3\n3 6\n4 14\n9 10","output":"YES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\MAKEMULTIPLE.cpp","group":"local","local":true}

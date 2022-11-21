@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -27,12 +25,22 @@ typedef vector<vi>vvi;
 #define print(x) cout<<x<<endl
 #define prnt(x) cout<<x
 
+bool isPrime(ll a) { 
+    if (a < 2)
+        return false;
+    for(ll i = 2; i * i <= a; i++) {
+        if(a % i == 0) return false;
+    }
+    return true;
+}
 
 
 void soln()
 {
-    ll n;
-    get n;
+    ll a, b;
+    get a>>b;
+    if(isPrime(a+b)) print("Alice");
+    else print("Bob");
 }
 int main()
 {

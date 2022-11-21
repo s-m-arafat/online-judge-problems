@@ -31,8 +31,15 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll n,a,b;
+    string ans="No";
+    get n>>a>>b;
+    if(n==a and a==b) ans= "Yes";
+    else if(n-1>a+b) ans= "Yes";
+    else {
+        ans="No";
+    }
+    print(ans);
 }
 int main()
 {

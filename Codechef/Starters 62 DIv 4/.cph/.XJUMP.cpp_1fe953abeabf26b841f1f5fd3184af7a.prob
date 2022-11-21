@@ -1,0 +1,1 @@
+{"name":"Local: XJUMP","url":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\XJUMP.cpp","tests":[{"id":1666795522653,"input":"4\n4 2\n8 3\n3 4\n2 1","output":"2\n4\n3\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Works\\Contest\\Codechef\\Starters 62 DIv 4\\XJUMP.cpp","group":"local","local":true}

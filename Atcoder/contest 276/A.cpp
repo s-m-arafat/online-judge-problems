@@ -31,17 +31,24 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    string s;
+    get s;
+    loopr(i,s.size()-1){
+        if(s[i]=='a'){
+            print(i+1);
+            return;
+        }
+    }
+    print(-1);
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

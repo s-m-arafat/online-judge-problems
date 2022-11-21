@@ -32,6 +32,7 @@ typedef vector<vi>vvi;
 void soln()
 {
     ll n;
+    string ans;
     get n;
 }
 int main()
@@ -39,9 +40,9 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

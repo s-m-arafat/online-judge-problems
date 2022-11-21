@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -31,8 +29,20 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
+    ll n,q,sum=0;
+    ll l,r;
     get n;
+    vll a(n);
+    get q;
+    loop(i,n){
+        get a[i];
+        sum+= a[i];
+    }
+    while(q--){
+        get l>>r;
+        if(abs(l-r+1)&1) sum++;
+    }
+    print(sum);
 }
 int main()
 {

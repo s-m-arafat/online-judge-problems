@@ -32,16 +32,32 @@ typedef vector<vi>vvi;
 void soln()
 {
     ll n;
-    get n;
+    
+    while(get n and n!=0){
+        string s;
+        char c;
+        ll ans=0, mn=imx;getchar(); 
+        loop(i,n+1){
+            ll sp=0;
+            
+            getline(cin,s);
+            //print(s);
+            sp = 25 - count(allv(s),'X');
+            print(sp);
+            ans +=sp;
+            mn = min(mn,sp);
+        }
+        //print(ans-(n*mn));
+    }
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

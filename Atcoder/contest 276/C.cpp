@@ -25,7 +25,7 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define prnt(x) cout<<x<<" "
 
 
 
@@ -33,15 +33,26 @@ void soln()
 {
     ll n;
     get n;
+    vi s;
+    int c;
+    loop(i,n){
+        get c;
+        s.pb(c);
+    }
+    prev_permutation(s.begin(),s.end());
+    loop(i,n){
+        prnt(s[i]);
+    }
+    cout<<nl;
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

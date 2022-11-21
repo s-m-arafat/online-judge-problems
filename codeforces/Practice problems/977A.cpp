@@ -31,17 +31,22 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll n;
-    get n;
+    ll n, k;
+    get n>>k;
+    while(k--){
+        if(n%10==0)n/=10;
+        else n--;
+    }
+    print(n);
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    int tests;
-    cin>>tests;
-    while(tests--)
+    // int tests;
+    // cin>>tests;
+    // while(tests--)
         soln();
     return 0;
 }

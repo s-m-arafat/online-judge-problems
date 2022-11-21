@@ -11,8 +11,6 @@ typedef vector<vi>vvi;
 
 #define nl '\n'
 #define get cin>>
-#define imn INT_MIN
-#define imx INT_MAX
 //vectors
 #define allv(a) a.begin(),a.end()
 #define pb push_back
@@ -31,8 +29,24 @@ typedef vector<vi>vvi;
 
 void soln()
 {
+    string s;
     ll n;
+    
     get n;
+    get s;
+    int i=0;
+    while(i<n){
+        if(s[i]==s[i+1] and n>1){
+            s[i] = '0';
+            s.erase(s.begin()+(i+1));
+            i=0;
+        }
+        
+        else i++;
+        n=s.size();
+    }
+    if(s.size()==1) print("YES");
+    else print("NO");
 }
 int main()
 {
