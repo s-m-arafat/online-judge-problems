@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-//SET PRECIOSION   cout << fixed ;  cout << setprecision(n) << ans << endl;
 
 typedef long long ll;
 typedef vector<ll>vll;
@@ -30,23 +29,37 @@ typedef vector<vi>vvi;
 #define print(x) cout<<x<<endl
 #define printl(x) cout<<x<<" "
 
+string addBinary(string a, string b) {
+    ll n = a.length();
+    ll m = b.length();
+    if (n < m)
+        swap(a, b);
 
+    ll len = max(n, m);
+    string result = "";
+
+    ll carry = 0;
+    for (int i = 0; i < len; i++) {
+        ll ai = i < n ? a[n - i - 1] - '0' : 0;
+        ll bi = i < m ? b[m - i - 1] - '0' : 0;
+        ll val = (ai + bi + carry) % 2;
+        carry = (ai + bi + carry) / 2;
+        result = (char)(val + '0') + result;
+    }
+
+    if (carry)
+        result = '1' + result;
+
+    return result;
+}
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
-    }
-    print(s);
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
+    string s1, s2;
+    get s1>>s2;
+    string res = addBinary(s1,s2);
+    print(res);
 }
 int main()
 {
@@ -57,7 +70,7 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
     while(tests--)
         soln();
     return 0;

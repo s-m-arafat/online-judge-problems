@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-//SET PRECIOSION   cout << fixed ;  cout << setprecision(n) << ans << endl;
 
 typedef long long ll;
 typedef vector<ll>vll;
@@ -34,19 +33,18 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
+    ll n;
+    string ans="YES";
+    get n;
+    vll a(n);
+    arrIn(a,n);
+        for(int i=n%2;i<n-1; i+=2){
+            if((a[i]>a[i+1]))swap(a[i],a[i+1]);
         }
-    }
-    print(s);
+        // arrOut(a,n);
+        bool f = is_sorted(all(a));
+        if(!f) ans = "NO";
+    print(ans);
 }
 int main()
 {
@@ -57,7 +55,7 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
     while(tests--)
         soln();
     return 0;

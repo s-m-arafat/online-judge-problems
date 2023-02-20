@@ -34,19 +34,22 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
     string s;
     get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
+    n = s.size();
+    loopn(i,1,n-1){
+        if(isupper(s[i])) continue;
+        else {
+            print(s);
+            return;
         }
     }
-    print(s);
+    loop(i,n){
+        if(isupper(s[i])) cout<<static_cast<char>(towlower(s[i]));
+        else cout<<static_cast<char>(towupper(s[i]));
+    }
+    cout<<nl;
 }
 int main()
 {

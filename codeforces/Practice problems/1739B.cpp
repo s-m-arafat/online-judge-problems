@@ -34,19 +34,19 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
+    ll n, m, x, y, z, k, l, c, sum=0, mult = 1, ans;
+    get n;
+    vll a(n), d(n);
+    arrIn(d,n);
+    a[0] = d[0];
+    loopn(i,1,n-1){
+        if(a[i-1]+d[i]>=0 and a[i-1]-d[i]>=0 and d[i]!=0){
+            print(-1);
+            return;
         }
+        else a[i] = (max(a[i-1]+d[i], a[i-1]-d[i]));
     }
-    print(s);
+    arrOut(a,n);
 }
 int main()
 {
@@ -57,7 +57,7 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
     while(tests--)
         soln();
     return 0;

@@ -34,19 +34,20 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
     string s;
     get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
+    string flag = "WUB";
+    auto pos = s.find(flag);
+    while(pos != string::npos){
+        s.replace(pos, flag.length(), " ");
+        pos = s.find(flag);
     }
-    print(s);
+    string w;
+    istringstream ss(s);
+    while(ss >> w){
+        printl(w);
+    }
 }
 int main()
 {

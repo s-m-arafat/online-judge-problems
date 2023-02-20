@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-//SET PRECIOSION   cout << fixed ;  cout << setprecision(n) << ans << endl;
 
 typedef long long ll;
 typedef vector<ll>vll;
@@ -25,28 +24,36 @@ typedef vector<vi>vvi;
 //loops
 #define loop(x,n) for(int x = 0; x < n; x++)
 #define loopn(x,a,n) for(int x = a; x <= n; x++)
-#define loopr(x,n) for(int x = n; x >= 0; x--)
+#define loopr(x,n) for(int x = n-2; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
 #define printl(x) cout<<x<<" "
 
-
+bool decreasing(ll a, ll b){return a>b;}
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
+    ll n;
+    get n;
+    vll a(n);
+    bool inc = true, dec = true;
+    loop(i,n){
+        get a[i];
+        if(i and a[i]<a[i-1]) inc = false;
+        else if(i and a[i]>a[i-1]) dec = false; 
+    }
+    ll ans=0;
+    if(inc) print(0);
+    else if(dec) print(-1);
+    else{
+        loopr(i,n){
+            if(a[i]>=a[i+1]){
+                while(a[i]>=a[i+1])a[i]/=2, ans++;
             }
         }
+        print(ans);
     }
-    print(s);
+    
 }
 int main()
 {
@@ -57,7 +64,7 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
     while(tests--)
         soln();
     return 0;

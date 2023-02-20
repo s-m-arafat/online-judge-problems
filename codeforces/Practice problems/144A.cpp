@@ -34,19 +34,24 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
+    ll n, m, x, y, z, k, l, sum=0, mult = 1, ans;
+    get n;
+    vll a(n);
+    arrIn(a,n);
+    ll j = n, mn=imx, mx = imn, posmx, posmn;
+    loop(i,n){
+        if(a[--j]>=mx){
+            mx = a[j];
+            posmx = j+1;
+        }
+        if(a[i]<=mn){
+            mn = a[i];
+            posmn = i+1;
         }
     }
-    print(s);
+    if(posmx < posmn) print((posmx-1)+(n-posmn));
+    else if(posmx > posmn) print((posmx-1)+(n-posmn)-1);
+    else if(posmx==posmn) print(0);
 }
 int main()
 {

@@ -17,6 +17,7 @@ typedef vector<vi>vvi;
 //vectors
 #define all(a) a.begin(),a.end()
 #define pb push_back
+#define to >>
 //
 #define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
 #define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<" ";\
@@ -34,19 +35,13 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
-    }
-    print(s);
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
+    get n to m;
+    ll n1 = n>=3?2:1;
+    ll m1 = m>=3?2:1;
+
+    print(n1<<" "<<m1);
+
 }
 int main()
 {
@@ -57,7 +52,7 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
     while(tests--)
         soln();
     return 0;

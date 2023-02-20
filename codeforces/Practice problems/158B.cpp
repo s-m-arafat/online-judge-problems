@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-//SET PRECIOSION   cout << fixed ;  cout << setprecision(n) << ans << endl;
 
 typedef long long ll;
 typedef vector<ll>vll;
@@ -34,19 +33,27 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans=0;
+    get n;
+    ll c1=0, c2=0, c3=0, c4=0;
+    loop(i,n){
+        get m;
+        if(m==1)c1++;
+        else if(m==2)c2++;
+        else if(m==3)c3++;
+        else if(m==4)c4++;
     }
-    print(s);
+    ans+=c4;
+    ll mn = min(c1,c3);
+    ans+=mn;
+    c1-=mn;
+    c3-=mn;
+    ans+=(c2/2);
+    c2=c2&1?2:0;
+    ans+=(c1/4);
+    c1-=(c1/4)*4;
+    ans+=ceil(double(c1+c2)/4.00);
+    print(ans+c3);
 }
 int main()
 {

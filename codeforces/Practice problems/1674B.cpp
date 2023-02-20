@@ -1,15 +1,13 @@
 //Auth:Shakil Mahmud Arafat -arft666, AUST, Dept. of EEE
-
 #include<bits/stdc++.h>
 using namespace std;
-//SET PRECIOSION   cout << fixed ;  cout << setprecision(n) << ans << endl;
 
 typedef long long ll;
 typedef vector<ll>vll;
 typedef vector<int>vi;
 typedef vector<vll>vvl;
 typedef vector<vi>vvi;
-// #define OJ
+//  #define OJ
 #define nl '\n'
 #define get cin>>
 #define imn INT_MIN
@@ -26,27 +24,16 @@ typedef vector<vi>vvi;
 #define loop(x,n) for(int x = 0; x < n; x++)
 #define loopn(x,a,n) for(int x = a; x <= n; x++)
 #define loopr(x,n) for(int x = n; x >= 0; x--)
-//cout
 #define print(x) cout<<x<<endl
 #define printl(x) cout<<x<<" "
 
-
-
-void soln()
+void soln(map<string, int>a)
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
+    ll n;
     string s;
     get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
-    }
-    print(s);
+    print(a[s]+1);
+
 }
 int main()
 {
@@ -57,8 +44,20 @@ int main()
         freopen("output.txt", "w", stdout);
     #endif
     int tests=1;
-    // cin>>tests;
+    cin>>tests;
+    map<string, int>mp;
+    ll pos =0;
+    loop(i,26){
+        loop(j,26){
+            if(i!=j) {
+                string t = "";
+                t ='a'+i;
+                t+=('a'+j);
+                mp[t] = pos++;
+            }
+        }
+    }
     while(tests--)
-        soln();
+        soln(mp);
     return 0;
 }

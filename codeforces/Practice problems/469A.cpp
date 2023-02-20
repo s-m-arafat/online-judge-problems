@@ -34,19 +34,21 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
-    string s;
-    get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
+    get n;
+    set<int>lvl;
+    get x;
+    while(x--){
+        get z;
+        lvl.insert(z);
     }
-    print(s);
+    get x;
+    while(x--){
+        get z;
+        lvl.insert(z);
+    }
+    if(n==lvl.size())print("I become the guy.");
+    else print("Oh, my keyboard!");
 }
 int main()
 {

@@ -34,19 +34,19 @@ typedef vector<vi>vvi;
 
 void soln()
 {
-    ll t, n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
-    get n>>t;
+    ll n, m, x, y, z, k, l, a, b, c, sum=0, mult = 1, ans;
+    get n;
     string s;
     get s;
-    while(t--){
-        loop(i,n-1){
-            if(s[i]!=s[i+1] and s[i]=='B'){
-                swap(s[i], s[i+1]);
-                i++;
-            }
-        }
+    set<char>alph;
+    for(int i=0; i<n; i++){
+         alph.insert(tolower(s[i]));
+        //  printl(s[i]);
     }
-    print(s);
+    // for(auto w:alph) printl(w);
+    // print(alph.size());
+    if(alph.size()<26) print("NO");
+    else print("YES");
 }
 int main()
 {
