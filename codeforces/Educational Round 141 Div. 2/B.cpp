@@ -1,4 +1,4 @@
-//Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
+//Auth:Shakil Mahmud Arafat -arft666, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -18,35 +18,34 @@ typedef vector<vi>vvi;
 #define pb push_back
 //
 #define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
-#define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
+#define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<" ";\
+cout<<endl;
 //loops
 #define loop(x,n) for(int x = 0; x < n; x++)
 #define loopn(x,a,n) for(int x = a; x <= n; x++)
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define printl(x) cout<<x<<" "
 
 
 
 void soln()
 {
     ll n;
-    int space, sum, mn;
-    while(get n and n){
-        cin.ignore();
-        string s;
-        sum = 0;
-        mn = imx;
-        loop(i,n){
-            
-            space=0;
-            getline(cin,s);
-            space = 25 - count(all(s), 'X');
-            sum += space;
-            mn = min(space, mn);
+    get n;
+    ll a=0;
+    bool alt = 1;
+    ll b=n*n;
+    loop(i,n){
+        vll ans(n);
+        loop(j,n){
+            if(alt) ans[j] = ++a;
+            else ans[j] = b--;
+            alt ^= 1;
         }
-        print((sum - (n*mn)));
+        if(i%2==0) reverse(all(ans));
+        arrOut(ans,n);
     }
 }
 int main()
@@ -54,9 +53,9 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // int tests;
-    // cin>>tests;
-    // while(tests--)
+    int tests;
+    cin>>tests;
+    while(tests--)
         soln();
     return 0;
 }

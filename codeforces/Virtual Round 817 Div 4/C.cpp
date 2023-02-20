@@ -1,4 +1,4 @@
-//Auth:Shakil Mahmud Arafat, AUST, Dept. of EEE
+//Auth:Shakil Mahmud Arafat -arft666, AUST, Dept. of EEE
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -25,38 +25,43 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define printl(x) cout<<x<<" "
 
 
 
 void soln()
 {
     ll n;
-    int space, sum, mn;
-    while(get n and n){
-        cin.ignore();
-        string s;
-        sum = 0;
-        mn = imx;
-        loop(i,n){
-            
-            space=0;
-            getline(cin,s);
-            space = 25 - count(all(s), 'X');
-            sum += space;
-            mn = min(space, mn);
+    get n;
+    string w;
+    vector<string> s[3];
+    map<string,int> rec;
+    loop(i,3){
+        loop(j,n){
+            get w;
+            rec[w]++;
+            s[i].pb(w);
         }
-        print((sum - (n*mn)));
     }
+    loop(i,3){
+        int count=0;
+        loop(j,n){
+            if(rec[s[i][j]]==1)count+=3;
+            else if(rec[s[i][j]]==2)count++;
+        }
+        printl(count);
+    }
+    cout<<nl;
+
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // int tests;
-    // cin>>tests;
-    // while(tests--)
+    int tests;
+    cin>>tests;
+    while(tests--)
         soln();
     return 0;
 }

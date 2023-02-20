@@ -25,38 +25,27 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define prnt(x) cout<<x<<" "
 
 
 
 void soln()
 {
-    ll n;
-    int space, sum, mn;
-    while(get n and n){
-        cin.ignore();
-        string s;
-        sum = 0;
-        mn = imx;
-        loop(i,n){
-            
-            space=0;
-            getline(cin,s);
-            space = 25 - count(all(s), 'X');
-            sum += space;
-            mn = min(space, mn);
-        }
-        print((sum - (n*mn)));
-    }
+    string a,b;
+    get a;
+    sort(all(a));
+    b = a;
+    reverse(all(b));
+    print(a+b);
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // int tests;
-    // cin>>tests;
-    // while(tests--)
+    int tests;
+    cin>>tests;
+    while(tests--)
         soln();
     return 0;
 }

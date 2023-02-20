@@ -10,6 +10,7 @@ typedef vector<vll>vvl;
 typedef vector<vi>vvi;
 
 #define nl '\n'
+#define pnl cout<<'\n'
 #define get cin>>
 #define imn INT_MIN
 #define imx INT_MAX
@@ -25,38 +26,41 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define printl(x) cout<<x<<" "
 
 
 
 void soln()
 {
-    ll n;
-    int space, sum, mn;
-    while(get n and n){
-        cin.ignore();
-        string s;
-        sum = 0;
-        mn = imx;
-        loop(i,n){
-            
-            space=0;
-            getline(cin,s);
-            space = 25 - count(all(s), 'X');
-            sum += space;
-            mn = min(space, mn);
+    ll n,x;
+    get n>>x;
+    vll a(n);
+    
+    if(n%x) print(-1);
+    else {
+        iota(all(a),1);
+        a[0] = x;
+        a[n-1] = 1;
+        
+        loopn(i,2*x,n){
+            if(n%i==0){
+                a[x-1] = i;
+                x = i;
+            }
+            i+=(x-1);
         }
-        print((sum - (n*mn)));
-    }
+        loop(i,n) printl(a[i]);
+        pnl;
+    } 
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // int tests;
-    // cin>>tests;
-    // while(tests--)
+    int tests;
+    cin>>tests;
+    while(tests--)
         soln();
     return 0;
 }

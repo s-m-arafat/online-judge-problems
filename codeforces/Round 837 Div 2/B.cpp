@@ -16,6 +16,7 @@ typedef vector<vi>vvi;
 //vectors
 #define all(a) a.begin(),a.end()
 #define pb push_back
+#define mp make_pair
 //
 #define arrIn(a,n) for(int x = 0; x < n; x++) cin>>a[x]
 #define arrOut(a,n) for(int x = 0; x < n; x++) cout<<a[x]<<endl
@@ -25,38 +26,31 @@ typedef vector<vi>vvi;
 #define loopr(x,n) for(int x = n; x >= 0; x--)
 //cout
 #define print(x) cout<<x<<endl
-#define prnt(x) cout<<x
+#define printl(x) cout<<x<<" "
 
 
 
 void soln()
 {
-    ll n;
-    int space, sum, mn;
-    while(get n and n){
-        cin.ignore();
-        string s;
-        sum = 0;
-        mn = imx;
-        loop(i,n){
-            
-            space=0;
-            getline(cin,s);
-            space = 25 - count(all(s), 'X');
-            sum += space;
-            mn = min(space, mn);
-        }
-        print((sum - (n*mn)));
+    ll n,m,a,b;
+    ll ans=0;
+    get n>>m;
+    map<pair<ll, ll>,ll> mm;
+    loop(i,n) mm[mp(i,i+1)]++;
+    loop(i,m){
+        get a>>b;
+        if(mm.find(mp(a,b))!=mm.end()) ans++;
     }
+    print((n+(n-1))-ans);
 }
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    // int tests;
-    // cin>>tests;
-    // while(tests--)
+    int tests;
+    cin>>tests;
+    while(tests--)
         soln();
     return 0;
 }
