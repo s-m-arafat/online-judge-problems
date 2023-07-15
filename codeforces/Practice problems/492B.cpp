@@ -38,7 +38,7 @@ void soln()
     string s;
  
     get n;
-    
+    print(n);
  
 }
 int main()
